@@ -1,0 +1,8 @@
+<div class="app-container">
+  <app-sidebar #sidebar (screenWidthChange)="onScreenWidthChange($event)"></app-sidebar>
+
+  <div class="main-content" [class.sidebar-collapsed]="isWideScreen && sidebar?.isCollapsed"
+    [class.sidebar-hidden]="!isWideScreen">
+    <router-outlet></router-outlet>
+  </div>
+</div>

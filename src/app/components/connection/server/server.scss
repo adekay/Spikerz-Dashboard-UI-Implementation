@@ -1,0 +1,55 @@
+.popover-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  min-width: 362px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+
+  .server-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .server-icon {
+      height: 52.92px;
+      width: 52.92px;
+    }
+
+    .server-name {
+      font-weight: 600;
+      font-size: 13px;
+      color: #525D73;
+      margin: 0px;
+    }
+  }
+
+  .ip-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .address {
+      font-weight: 700;
+      font-size: 15px !important;
+      color: #525D73;
+      margin: 0px;
+    }
+
+    .dormant-ip {
+      width: fit-content;
+      background: #F2EDFF;
+      color: #6236CC;
+      padding: 4px 6px;
+      border-radius: 6px;
+    }
+  }
+}

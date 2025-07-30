@@ -1,0 +1,80 @@
+<div class="assessment-container">
+  <div class="grid-container">
+    <div class="asset-table-section">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="asset-header">Asset</th>
+            <th class="risk-header">Contextual Risk</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asset of assets">
+            <td>
+              <div class="asset-info">
+                <img src="assets/images/server.png" alt="server" />
+                <div class="asset-details">
+                  <div class="asset-name">{{asset.name}}</div>
+                  <div class="asset-ip">{{asset.ipAddress}}</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="risk-badge" [ngClass]="'risk-badge-' + asset.riskLevel.toLowerCase()">
+                {{asset.riskLevel}}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination-container">
+        <img src="assets/svgs/chevron-left.svg" alt="chevron-left" class="pagination-chevron"
+          [class.disabled]="!canGoPrevious" (click)="previousPage()" />
+        <span class="pagination-text">Showing {{startItem}}-{{endItem}} of {{totalAssets}}</span>
+        <img src="assets/svgs/chevron-right.svg" alt="chevron-right" class="pagination-chevron"
+          [class.disabled]="!canGoNext" (click)="nextPage()" />
+      </div>
+    </div>
+
+    <div class="risk-summary-section">
+      <div class="risk-summary">
+        <h4 class="risk-summary-title">Contextual Risk</h4>
+        <div class="risk-summary-chart">
+          <div class="risk-summary-chart-stats">
+            <div class="risk-summary-chart-stats-item">
+              <span class="risk-dot critical-dot"></span>
+              <span class="risk-count">{{riskSummary.critical}}</span>
+              <span class="risk-label">Critical</span>
+            </div>
+
+            <div class="risk-summary-chart-stats-item">
+              <span class="risk-dot high-dot"></span>
+              <span class="risk-count">{{riskSummary.high}}</span>
+              <span class="risk-label">High</span>
+            </div>
+
+            <div class="risk-summary-chart-stats-item">
+              <span class="risk-dot medium-dot"></span>
+              <span class="risk-count">{{riskSummary.medium}}</span>
+              <span class="risk-label">Medium</span>
+            </div>
+
+            <div class="risk-summary-chart-stats-item">
+              <span class="risk-dot low-dot"></span>
+              <span class="risk-count">{{riskSummary.low}}</span>
+              <span class="risk-label">Low</span>
+            </div>
+          </div>
+
+          <div class="risk-chart">
+            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [colors]="chartOptions.colors"
+              [responsive]="chartOptions.responsive" [dataLabels]="chartOptions.dataLabels" [stroke]="chartOptions.stroke"
+              [legend]="chartOptions.legend" [tooltip]="chartOptions.tooltip" [plotOptions]="chartOptions.plotOptions">
+            </apx-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
