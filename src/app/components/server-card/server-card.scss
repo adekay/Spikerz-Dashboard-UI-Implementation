@@ -1,0 +1,235 @@
+mat-accordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+
+  mat-expansion-panel {
+    margin-bottom: 16px;
+    border-radius: 15px !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #F0F1F3;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &.clickable-panel {
+      &:hover {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+        transform: translateY(-1px);
+      }
+    }
+
+    ::ng-deep .mat-expansion-indicator {
+      display: none;
+    }
+
+    &-header {
+      padding: 16px;
+      height: auto !important;
+      cursor: pointer;
+
+      &:hover {
+        background: #f5f5f5 !important;
+      }
+    }
+
+    ::ng-deep .mat-expansion-panel-body {
+      padding: 16px !important;
+      cursor: pointer;
+
+      &:hover {
+        background: #fafafa;
+      }
+    }
+
+    ::ng-deep .mat-content {
+      display: block;
+    }
+
+    .server {
+      margin-top: 16px;
+      background-color: #fafafa;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &-image {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        img {
+          width: 52.92px;
+          height: 52.92px;
+          border-radius: 50%;
+        }
+      }
+
+      &-description {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: center;
+
+        &-name {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 13.5px;
+          color: #404A60;
+          margin: 0px;
+        }
+
+        &-status {
+          font-weight: 500;
+          font-size: 9.45px;
+          color: #667085;
+          line-height: 10.13px;
+          margin: 0px;
+        }
+
+        &-details {
+          font-weight: 400;
+          font-size: 13px;
+          color: #404A60;
+          line-height: 22px;
+          margin: 0px;
+        }
+      }
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: #030229;
+      cursor: pointer;
+    }
+
+    .panel-content {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border-radius: 0 0 15px 15px;
+
+      p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0px;
+        color: #525D73;
+      }
+    }
+  }
+}
+
+@media (max-width: 1380px) {
+  mat-accordion {
+    mat-expansion-panel {
+      margin-bottom: 14px;
+
+      .panel-title {
+        font-size: 12px;
+      }
+
+      .server {
+        padding: 6px 14px;
+
+        &-image {
+          img {
+            width: 45px;
+            height: 45px;
+          }
+        }
+
+        &-description {
+          &-name {
+            font-size: 11.5px;
+          }
+
+          &-status {
+            font-size: 9px;
+          }
+
+          &-details {
+            font-size: 9px;
+            line-height: 12px;
+          }
+        }
+      }
+
+      .panel-content p {
+        font-size: 12px;
+      }
+
+      ::ng-deep .mat-expansion-panel-body {
+        padding: 8px 14px 14px 14px !important;
+      }
+
+      &-header {
+        padding: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  mat-accordion {
+    mat-expansion-panel {
+      .server {
+        .row {
+          flex-direction: column;
+          gap: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  mat-accordion {
+    mat-expansion-panel {
+      margin-bottom: 12px;
+
+      &-header {
+        padding: 12px;
+      }
+
+      ::ng-deep .mat-expansion-panel-body {
+        padding: 12px !important;
+      }
+
+      .server {
+        padding: 6px 12px;
+
+        &-image img {
+          width: 40px;
+          height: 40px;
+        }
+
+        &-description {
+          &-name {
+            font-size: 11px;
+          }
+
+          &-status {
+            font-size: 8px;
+          }
+
+          &-details {
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+
+      .panel-title {
+        font-size: 14px;
+      }
+
+      .panel-content p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

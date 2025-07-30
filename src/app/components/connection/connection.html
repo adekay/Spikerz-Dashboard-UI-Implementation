@@ -1,0 +1,21 @@
+<div class="server" [ngbPopover]="popoverContent" popoverClass="custom-popover" triggers="manual"
+  [placement]="connection?.id === 4 || connection?.id === 5 ? 'left' : 'bottom'" #p="ngbPopover" (mouseenter)="p.open()"
+  (mouseleave)="p.close()">
+  <img [src]="connection?.image" class="server-icon" />
+  <p>{{ connection?.name }}</p>
+  <small *ngIf="connection?.ip">{{ connection?.ip }}</small>
+</div>
+
+<ng-template #popoverContent>
+  <ng-container *ngIf="connection?.id === 1">
+    <app-ec2 [connection]="connection"></app-ec2>
+  </ng-container>
+
+  <ng-container *ngIf="connection?.id === 2 || connection?.id === 3">
+    <app-server [connection]="connection"></app-server>
+  </ng-container>
+
+  <ng-container *ngIf="connection?.id === 4 || connection?.id === 5">
+    <app-instance [connection]="connection"></app-instance>
+  </ng-container>
+</ng-template>

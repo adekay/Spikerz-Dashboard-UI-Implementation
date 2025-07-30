@@ -1,0 +1,31 @@
+<div class="server-connection">
+  <div class="servers">
+    <app-connection [connection]="ec2"></app-connection>
+    <img src="assets/images/connector.png" alt="connector" class="connector" />
+    <app-connection [connection]="server1"></app-connection>
+    <img src="assets/images/connector.png" alt="connector" class="connector" />
+    <app-connection [connection]="server2"></app-connection>
+    <img src="assets/images/branch-connector.png" alt="branch-connector" class="branch-connector" />
+    <div class="branch-connector-container">
+      <app-connection [connection]="instance1"></app-connection>
+      <app-connection [connection]="instance2"></app-connection>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="server-status">
+    <div class="server-status-item">
+      <img src="assets/images/failed-group.png" alt="server" class="server-icon" />
+      <p class="status failed">Lorem</p>
+    </div>
+    <div class="server-status-item">
+      <img src="assets/images/pending-group.png" alt="server" class="server-icon" />
+      <p class="status pending">Lorem</p>
+    </div>
+    <div class="server-status-item">
+      <img src="assets/images/success-group.png" alt="server" class="server-icon" />
+      <p class="status success">Lorem</p>
+    </div>
+  </div>
+</div>

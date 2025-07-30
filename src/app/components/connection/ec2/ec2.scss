@@ -1,0 +1,48 @@
+.popover-card {
+  padding: 16px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  min-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    padding: 4px 2px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+
+  .ip-name {
+    width: fit-content;
+    background: #FFF1F0;
+    color: #E5372B;
+  }
+
+  .ips {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .ip-container {
+      display: flex;
+      gap: 4px;
+      justify-content: flex-end;
+
+      .ip {
+        background: #FFF1F0;
+        color: #E5372B;
+        min-width: 106px;
+      }
+    }
+  }
+
+  .dormant-ip {
+    width: fit-content;
+    background: #F2EDFF;
+    color: #6236CC;
+  }
+}

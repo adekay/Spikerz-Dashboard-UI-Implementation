@@ -1,0 +1,74 @@
+.popover-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  min-width: 255px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 999;
+
+  p {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+
+  .server-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .server-icon {
+      height: 52.92px;
+      width: 52.92px;
+    }
+
+    .server-details {
+      .server-name {
+        font-weight: 600;
+        font-size: 13px;
+        color: #525D73;
+        margin: 0px;
+      }
+
+      .ip-address {
+        font-weight: 500;
+        font-size: 9.45px;
+        margin: 0px;
+        color: #667085;
+      }
+    }
+
+  }
+
+  .ip-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .address {
+      font-weight: 700;
+      font-size: 15px !important;
+      color: #525D73;
+      margin: 0px;
+    }
+
+    .loading-ip {
+      width: fit-content;
+      background: #FFF9ED;
+      color: #EBA622;
+      padding: 4px 6px;
+      border-radius: 6px;
+    }
+
+    .ip-location {
+      width: fit-content;
+      background: #ECF5FF;
+      color: #0053B5;
+      padding: 4px 6px;
+      border-radius: 6px;
+    }
+  }
+}

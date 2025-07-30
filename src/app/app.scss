@@ -1,0 +1,30 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+  transition: margin-left 0.3s ease;
+  background-color: #fafafa;
+
+  &.sidebar-collapsed {
+    margin-left: 50px;
+  }
+
+  &.sidebar-hidden {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1048px) {
+  .main-content {
+    margin-left: 250px;
+
+    &.sidebar-collapsed {
+      margin-left: 50px;
+    }
+  }
+}

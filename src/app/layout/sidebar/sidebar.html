@@ -1,0 +1,106 @@
+<button class="hamburger-btn" *ngIf="!isWideScreen && !showMobileMenu" (click)="openFullSidebar()">
+  <img src="assets/svgs/hamburger.svg" alt="hamburger" class="toggle-icon">
+</button>
+
+<div class="sidebar" [ngClass]="{ 'collapsed': isCollapsed, 'hidden': !isWideScreen && !showMobileMenu }">
+  <button class="toggle-btn" (click)="toggleSidebar()">
+    <img src="assets/svgs/collapser.svg" alt="toggle" class="toggle-icon" [ngClass]="{'flipped': isCollapsed}">
+  </button>
+
+  <div class="sidebar-scroll-container">
+    <div class="sidebar-content">
+      <div class="menu-item">
+        <img src="assets/svgs/menu.svg" alt="menu" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/svgs/alert.svg" alt="alert" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/svgs/cube.svg" alt="cube" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/svgs/connector.svg" alt="connector" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/svgs/socket.svg" alt="socket" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/svgs/note.svg" alt="note" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/svgs/graph.svg" alt="graph" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="menu-item">
+        <img src="assets/svgs/settings.svg" alt="settings" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/svgs/notification.svg" alt="notification" class="menu-icon">
+        <p class="menu-label">Lorem</p>
+      </div>
+      <div class="profile-menu">
+        <div class="profile">
+          <img src="assets/images/profile-avatar.png" alt="profile-avatar" class="profile-avatar">
+          <div class="profile-info">
+            <p>Lorem</p>
+            <p>Lorem</p>
+          </div>
+        </div>
+        <img src="assets/svgs/logout.svg" alt="logout" class="logout-icon">
+      </div>
+    </div>
+  </div>
+
+  <div class="collapsed-content">
+    <div class="collapsed-menu-icons">
+      <div class="collapsed-logo" title="Logo">
+        <img src="assets/images/logo.png" alt="logo" class="logo-icon">
+      </div>
+      <div class="menu-item collapsed-menu-item" title="Menu">
+        <img src="assets/svgs/menu.svg" alt="menu" class="menu-icon">
+      </div>
+      <div class="menu-item collapsed-menu-item" title="Alert">
+        <img src="assets/svgs/alert.svg" alt="alert" class="menu-icon">
+      </div>
+      <div class="menu-item collapsed-menu-item" title="Cube">
+        <img src="assets/svgs/cube.svg" alt="cube" class="menu-icon">
+      </div>
+      <div class="menu-item collapsed-menu-item" title="Connector">
+        <img src="assets/svgs/connector.svg" alt="connector" class="menu-icon">
+      </div>
+      <div class="menu-item collapsed-menu-item" title="Socket">
+        <img src="assets/svgs/socket.svg" alt="socket" class="menu-icon">
+      </div>
+      <div class="menu-item collapsed-menu-item" title="Note">
+        <img src="assets/svgs/note.svg" alt="note" class="menu-icon">
+      </div>
+      <div class="menu-item collapsed-menu-item" title="Graph">
+        <img src="assets/svgs/graph.svg" alt="graph" class="menu-icon">
+      </div>
+    </div>
+
+    <div class="collapsed-footer">
+      <div class="menu-item collapsed-menu-item" title="Settings">
+        <img src="assets/svgs/settings.svg" alt="settings" class="menu-icon">
+      </div>
+      <div class="menu-item collapsed-menu-item" title="Notifications">
+        <img src="assets/svgs/notification.svg" alt="notification" class="menu-icon">
+      </div>
+      <div class="collapsed-profile" title="Profile">
+        <img src="assets/images/profile-avatar.png" alt="profile-avatar" class="profile-avatar">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sidebar-overlay" *ngIf="!isWideScreen && showMobileMenu" (click)="hideSidebar()"></div>
