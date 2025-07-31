@@ -8,9 +8,9 @@
   gap: 16px;
   height: 100%;
 
-  @media (min-width: 1640px) {
+  @media (min-width: 1450px) {
     flex-direction: row;
-    gap: 24px;
+    gap: 18px;
   }
 }
 
@@ -18,33 +18,38 @@
 .risk-summary-section {
   width: 100%;
 
-  @media (min-width: 1640px) {
+  @media (min-width: 1450px) {
     width: 50%;
   }
 }
 
 .asset-table-section {
   border-radius: 15px;
-  border: 1px solid #F0F1F3;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid var(--color-gray-100);
+  box-shadow: var(--box-shadow-light) !important;
 
   table {
     border-radius: 15px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     margin: 0;
 
     thead {
       tr {
         th {
           color: #858D9D;
-          border-bottom: 1px solid #E0E2E7;
+          border-bottom: 1px solid var(--color-gray-300);
           padding: 8px 16px;
           height: 40px;
           border-top-left-radius: 15px;
           border-top-right-radius: 15px;
           font-weight: 400;
           font-size: 13px;
+
+          @media (max-width: 1656px) {
+            font-size: 11px;
+            padding: 8px 8px;
+          }
 
           &.asset-header {
             width: 60%;
@@ -60,9 +65,13 @@
     tbody {
       tr {
         td {
-          border-bottom: 1px solid #F3F4F6;
+          border-bottom: 1px solid var(--color-gray-200);
           padding: 8px 16px;
           vertical-align: middle;
+
+          @media (max-width: 1656px) {
+            padding: 8px 8px;
+          }
 
           img {
             height: 45px;
@@ -82,12 +91,20 @@
               .asset-name {
                 font-size: 14px;
                 font-weight: 500;
-                color: #374151;
+                color: var(--color-gray-900);
+
+                @media (max-width: 1656px) {
+                  font-size: 12px;
+                }
               }
 
               .asset-ip {
                 font-size: 12px;
-                color: #6B7280;
+                color: var(--color-gray-600);
+
+                @media (max-width: 1656px) {
+                  font-size: 8px;
+                }
               }
             }
           }
@@ -98,8 +115,13 @@
             font-size: 12px;
             font-weight: 500;
             text-align: center;
-            background-color: #FEE2E2;
-            color: #DC2626;
+            background-color: var(--color-red-100);
+            color: var(--color-red-700);
+
+            @media (max-width: 1656px) {
+              padding: 6px 8px;
+              font-size: 10px;
+            }
           }
         }
       }
@@ -111,12 +133,12 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-    padding: 8px;
-    border-top: 1px solid #E5E7EB;
+    padding: 7px;
+    border-top: 1px solid var(--color-gray-400);
 
     .pagination-text {
       font-size: 14px;
-      color: #6B7280;
+      color: var(--color-gray-600);
     }
 
     .pagination-chevron {
@@ -137,14 +159,15 @@
 
 .risk-summary {
   padding: 16px 24px;
-  border: 1px solid #F0F1F3;
+  border: 1px solid var(--color-gray-100);
   border-radius: 15px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.1) !important;
+  box-shadow: var(--box-shadow-light) !important;
+  height: 100%;
 
   &-title {
     font-size: 18px;
     font-weight: 500;
-    color: #667085;
+    color: var(--color-gray-700);
     margin: 0 0 16px 0;
   }
 
@@ -152,6 +175,10 @@
     display: flex;
     align-items: center;
     column-gap: 52px;
+
+    @media (max-width: 1480px) {
+      column-gap: 32px;
+    }
 
     @media (max-width: 1024px) {
       column-gap: 32px;
@@ -178,19 +205,19 @@
           border-radius: 50%;
 
           &.critical-dot {
-            background-color: #DC2626;
+            background-color: var(--color-red-700);
           }
 
           &.high-dot {
-            background-color: #EA580C;
+            background-color: var(--color-orange-700);
           }
 
           &.medium-dot {
-            background-color: #D97706;
+            background-color: var(--color-orange-800);
           }
 
           &.low-dot {
-            background-color: #059669;
+            background-color: var(--color-green-700);
           }
         }
       }
@@ -201,13 +228,13 @@
 .risk-count {
   font-size: 16px;
   font-weight: 600;
-  color: #374151;
+  color: var(--color-gray-900);
   min-width: 20px;
 }
 
 .risk-label {
   font-size: 14px;
-  color: #6B7280;
+  color: var(--color-gray-600);
 }
 
 .risk-chart {

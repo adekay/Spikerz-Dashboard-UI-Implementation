@@ -1,5 +1,5 @@
 .server-connection {
-  background-color: #FAFAFA;
+  background-color: var(--color-light-background);
   padding: 16px;
   border-radius: 15px;
 
@@ -7,10 +7,16 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
-    justify-content: center;
     max-width: 830px;
     overflow: auto;
     margin: auto;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .connector {
       height: 5px;
@@ -18,22 +24,6 @@
 
     .branch-connector {
       height: 104px;
-    }
-
-    @media (max-width: 830px) {
-      width: 600px;
-    }
-
-    @media (max-width: 592px) {
-      width: 330px;
-    }
-
-    @media (max-width: 462px) {
-      width: 200px;
-    }
-
-    @media (max-width: 450px) {
-      width: 150px;
     }
   }
 
@@ -63,7 +53,7 @@
       margin: 0px;
 
       &.failed {
-        color: #E5372B;
+        color: var(--color-red-800);
       }
 
       &.pending {
@@ -71,7 +61,7 @@
       }
 
       &.success {
-        color: #02983E;
+        color: var(--color-green-800);
       }
     }
   }

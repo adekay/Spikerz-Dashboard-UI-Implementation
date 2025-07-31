@@ -1,8 +1,8 @@
 .popover-card {
   padding: 16px;
   border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-popover);
   min-width: 460px;
   display: flex;
   flex-direction: column;
@@ -18,8 +18,8 @@
 
   .ip-name {
     width: fit-content;
-    background: #FFF1F0;
-    color: #E5372B;
+    background: var(--color-red-200);
+    color: var(--color-red-800);
   }
 
   .ips {
@@ -33,8 +33,8 @@
       justify-content: flex-end;
 
       .ip {
-        background: #FFF1F0;
-        color: #E5372B;
+        background: var(--color-red-200);
+        color: var(--color-red-800);
         min-width: 106px;
       }
     }
@@ -42,7 +42,7 @@
 
   .dormant-ip {
     width: fit-content;
-    background: #F2EDFF;
-    color: #6236CC;
+    background: var(--color-purple-100);
+    color: var(--color-purple-700);
   }
 }

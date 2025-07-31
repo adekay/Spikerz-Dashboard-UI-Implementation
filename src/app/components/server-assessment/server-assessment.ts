@@ -5,13 +5,14 @@ import {
   RiskLevel
 } from '../../types';
 import { ALL_ASSETS, DEFAULT_RISK_CLASSES, DEFAULT_RISK_COLORS } from '../../constants';
-import { ApexChart } from "ng-apexcharts";
+import { ApexChart, NgApexchartsModule } from "ng-apexcharts";
+import { CommonModule } from '@angular/common';
 
 @Component({
-  standalone: false,
   selector: 'app-server-assessment',
   templateUrl: './server-assessment.html',
-  styleUrl: './server-assessment.scss'
+  styleUrl: './server-assessment.scss',
+  imports: [CommonModule, NgApexchartsModule]
 })
 export class ServerAssessment {
   riskSummary: RiskSummary = {

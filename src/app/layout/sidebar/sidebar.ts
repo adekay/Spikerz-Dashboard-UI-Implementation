@@ -1,11 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output, OnDestroy, OnInit } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
 
 @Component({
-  standalone: false,
   selector: 'app-sidebar',
   templateUrl: './sidebar.html',
-  styleUrls: ['./sidebar.scss']
+  styleUrls: ['./sidebar.scss'],
+  imports: [CommonModule]
 })
 export class Sidebar implements OnDestroy, OnInit {
   isCollapsed = false;

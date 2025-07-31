@@ -13,14 +13,14 @@
   p {
     font-weight: 600;
     font-size: 13px;
-    color: #525D73;
+    color: var(--color-gray-800);
     margin: 0px;
   }
 
   small {
     font-weight: 500;
     font-size: 9.45px;
-    color: #667085;
+    color: var(--color-gray-700);
   }
 }
 

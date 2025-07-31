@@ -1,11 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
 import { Sidebar } from './layout/sidebar/sidebar';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  standalone: false,
   selector: 'app-root',
   templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
+  imports: [
+    RouterOutlet,
+    Sidebar
+  ]
 })
 export class App {
   @ViewChild(Sidebar) sidebar!: Sidebar;

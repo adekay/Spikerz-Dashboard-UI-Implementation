@@ -1,7 +1,6 @@
 <mat-accordion>
-  <ng-container *ngFor="let server of servers; let i = index">
-    <mat-expansion-panel [expanded]="isPanelOpen(i)" (click)="togglePanel(i, $event)" class="clickable-panel">
-
+  <ng-container *ngFor="let server of servers">
+    <mat-expansion-panel [expanded]="false">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <h1 class="panel-title">{{server.title}}</h1>
@@ -22,7 +21,7 @@
         </div>
       </mat-expansion-panel-header>
 
-      <div class="panel-content" (click)="togglePanel(i, $event)">
+      <div class="panel-content">
         <p>{{server.details}}</p>
       </div>
     </mat-expansion-panel>

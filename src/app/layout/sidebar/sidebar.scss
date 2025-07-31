@@ -8,7 +8,7 @@
   left: 0;
   top: 0;
   z-index: 1000;
-  overflow: visible;
+  overflow-y: visible;
   padding: 32px 16px;
   display: flex;
   flex-direction: column;
@@ -31,6 +31,7 @@
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease 0.1s, visibility 0.3s ease 0.1s;
+    overflow-x: hidden;
   }
 
   .collapsed-content {
@@ -95,6 +96,20 @@
       cursor: pointer;
       transition: all 0.2s ease;
       position: relative;
+
+      &.active {
+        background-color: #E9FAF0;
+        color: #525D73;
+
+        .menu-icon {
+          filter: brightness(0.3) saturate(1.2);
+          transform: scale(1.1);
+        }
+
+        .menu-label {
+          color: #525D73;
+        }
+      }
 
       &:hover {
         background-color: #f5f6f8;
@@ -197,6 +212,20 @@
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       transform: translateX(0);
 
+      &.active {
+        background-color: #E9FAF0;
+        color: #525D73;
+
+        .menu-icon {
+          filter: brightness(0.3) saturate(1.2);
+          transform: scale(1.1);
+        }
+
+        .menu-label {
+          color: #525D73;
+        }
+      }
+
       &:hover {
         background-color: #f5f6f8;
         transform: translateX(4px);
@@ -231,6 +260,8 @@
   }
 
   .sidebar-footer {
+    overflow: hidden;
+
     .profile-menu {
       padding-top: 16px;
       border-top: 1px solid #F9F9F9;

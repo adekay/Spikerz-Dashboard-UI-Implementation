@@ -1,9 +1,9 @@
 .popover-card {
   padding: 16px;
   border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  min-width: 362px;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-popover);
+  min-width: 372px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -27,7 +27,7 @@
     .server-name {
       font-weight: 600;
       font-size: 13px;
-      color: #525D73;
+      color: var(--color-gray-800);
       margin: 0px;
     }
   }
@@ -40,14 +40,14 @@
     .address {
       font-weight: 700;
       font-size: 15px !important;
-      color: #525D73;
+      color: var(--color-gray-800);
       margin: 0px;
     }
 
     .dormant-ip {
       width: fit-content;
-      background: #F2EDFF;
-      color: #6236CC;
+      background: var(--color-purple-100);
+      color: var(--color-purple-700);
       padding: 4px 6px;
       border-radius: 6px;
     }

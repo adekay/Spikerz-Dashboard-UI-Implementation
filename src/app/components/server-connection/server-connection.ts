@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { ServerAvailability } from '../../types';
 import { EC2, INSTANCE1, INSTANCE2, SERVER1, SERVER2 } from '../../constants';
+import { Connection } from '../connection/connection';
 
 @Component({
-  standalone: false,
   selector: 'app-server-connection',
   templateUrl: './server-connection.html',
-  styleUrl: './server-connection.scss'
+  styleUrl: './server-connection.scss',
+  imports: [Connection]
 })
 export class ServerConnection {
   ec2: ServerAvailability = EC2;

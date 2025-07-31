@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
+import { ListItem, ServerAssessment, ServerCard, ServerConnection } from '../../components';
 
 @Component({
-  standalone: false,
   selector: 'app-home',
   templateUrl: './home.html',
-  styleUrls: ['./home.scss']
+  styleUrls: ['./home.scss'],
+  imports: [
+    ListItem,
+    ServerConnection,
+    ServerAssessment,
+    ServerCard
+  ]
 })
 export class Home { }
