@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output, OnDestroy, OnInit } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
+import { materialModules } from '../../shared/material';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.html',
   styleUrls: ['./sidebar.scss'],
-  imports: [CommonModule]
+  imports: [CommonModule, ...materialModules]
 })
 export class Sidebar implements OnDestroy, OnInit {
   isCollapsed = false;
@@ -28,7 +29,6 @@ export class Sidebar implements OnDestroy, OnInit {
       this.isWideScreen = newWidthState;
       this.screenWidthChange.emit(this.isWideScreen);
       this.isCollapsed = !this.isWideScreen;
-      this.showMobileMenu = false;
     }
   }
 

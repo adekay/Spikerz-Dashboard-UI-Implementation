@@ -1,8 +1,13 @@
 $color-white: #ffffff;
 $color-black: #000000;
 $color-light-background: #fafafa;
+$color-light: #f5f6f8;
 $color-dark-text: #030229;
 $color-gray-text: #334155;
+$color-profile: #F9F9F9;
+$color-menu-background: #f8f9fa;
+$color-menu-hover-background: #e9ecef;
+$color-menu-border: #dee2e6;
 
 $color-gray-100: #F0F1F3;
 $color-gray-200: #F3F4F6;
@@ -22,9 +27,11 @@ $color-yellow-700: #EBA622;
 
 $color-orange-700: #EA580C;
 $color-orange-800: #D97706;
+$color-orange-900: #FF9500;
 
 $color-green-700: #059669;
 $color-green-800: #02983E;
+$color-green-100: #E9FAF0;
 
 $color-red-100: #FEE2E2;
 $color-red-200: #FFF1F0;
@@ -41,8 +48,13 @@ $box-shadow-popover: 0 4px 10px rgba(0, 0, 0, 0.15);
   --color-white: #{$color-white};
   --color-black: #{$color-black};
   --color-light-background: #{$color-light-background};
+  --color-light: #{$color-light};
   --color-dark-text: #{$color-dark-text};
   --color-gray-text: #{$color-gray-text};
+  --color-profile: #{$color-profile};
+  --color-menu-background: #{$color-menu-background};
+  --color-menu-hover-background: #{$color-menu-hover-background};
+  --color-menu-border: #{$color-menu-border};
 
   --color-gray-100: #{$color-gray-100};
   --color-gray-200: #{$color-gray-200};
@@ -62,9 +74,11 @@ $box-shadow-popover: 0 4px 10px rgba(0, 0, 0, 0.15);
 
   --color-orange-700: #{$color-orange-700};
   --color-orange-800: #{$color-orange-800};
+  --color-orange-900: #{$color-orange-900};
 
   --color-green-700: #{$color-green-700};
   --color-green-800: #{$color-green-800};
+  --color-green-100: #{$color-green-100};
 
   --color-red-100: #{$color-red-100};
   --color-red-200: #{$color-red-200};
